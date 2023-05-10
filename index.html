@@ -4,9 +4,110 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Arrays con JS</title>
+    <script>
+        // Primera forma de declarar array
+        var articulos = ["Bicicleta", "Casco", "Maletin", "Cuaderno", "Libro"];
+        // Segunda forma de declarar array
+        var numbers = new Array("One", "Two", "Three", "Four", 5);
+        // Declaracion de Array vacio
+        var sports = [];
+    </script>
 </head>
 <body>
+    <div class="container">
+        
+        <header>
+            <h1>Curso JavaScript desde 0</h1>
+        </header>
+        
+        <div class="content">
+            <h2>Manejo de Arrays</h2>
+            <h3>Arrays Artículos</h3>
+            <script>
+                document.write("<p>El primer articulo es: <strong>");
+                document.write(articulos[0] + "</strong></p>");
+                document.write("<p>El segundo articulo es: <strong>");
+                document.write(articulos[1] + "</strong></p>");
+                document.write("<p>El tercer articulo es: <strong>");
+                document.write(articulos[2] + "</strong></p>");
+                document.write("<p>El cuarto articulo es: <strong>");
+                document.write(articulos[3] + "</strong></p>");
+                document.write("<p>El quinto articulo es: <strong>");
+                document.write(articulos[4] + "</strong></p>");
+                document.write("<p>El sexto articulo es: <strong>");
+                document.write("No hay un sexto artículo, lo siento</strong></p>");                
+                document.write("<p>El último artículo del Array es: <strong>");
+                document.write(articulos[4] + "</strong>. Se obtuvo este resultado con el código nombreArray[númeroElemento]</p>"); // Primera forma de acceder al último elemento del array, pero hay que saber cuantos elementos en total hay
+                //alert("El último elemento del Array Artículos es: " + articulos[articulos.length-1]);// Segunda forma de acceder al último elemento del array, sin saber cuantos elementos en total hay
+                document.write("<p>El primer artículo del Array es: <strong>");
+                document.write(articulos[0] + "</strong>. Se obtuvo este resultado con el código nombreArray[númeroElemento]</p>");
+                document.write("<h4>El total de elementos en el array artículos es: " + articulos.length + ". Hemos usado la propiedad lenght para obtener este valor</h4>");
+                articulos.unshift("Lapicero"); //Agrega elementos al inicio del arrray
+                document.write("<p>He agregado un nuevo elemento al inicio del array con el método unshift(),<strong>¿Quieres saber cuál es?</strong></p>")
+                document.write("<p>El primer elemento ahora es: <strong>" + articulos[0] + "</strong></p>");
+                document.write("<h4>Ahora el total de elementos del array es: <strong>" + articulos.length + "</strong></h4>");
+                articulos.push("Llanta"); //Agrega elementos al final del arrray
+                document.write("<p>Ahora he agregado un nuevo elemento, pero al final del array con el método push(),<strong>¿Quieres saber cuál es?</strong></p>")
+                document.write("<p>El último elemento ahora es: <strong>" + articulos[articulos.length-1] + "</strong>. Se obtuvo este resultado con el código nombreArray[nombreArray.lenght-1]</p>");
+                document.write("<h4>Ahora el total de elementos del array es: <strong>" + articulos.length + "</strong></h4>");
+                articulos.shift("Lapicero"); // Elimina elementos al inicio del array
+                document.write("<p>Acabo de eliminar el primer elemento del array con el metodo shift()</p>");
+                document.write("<h4>Ahora el total de elementos del array es: <strong>" + articulos.length + "</strong></h4>");
+                articulos.pop("Llanta"); // Elimina elementos al final del array
+                document.write("<p>Acabo de eliminar el primer elemento del array con el metodo pop()</p>");
+                document.write("<h4>Ahora el total de elementos del array es: <strong>" + articulos.length + "</strong></h4>");
+                //alert("En el Array Artículos hay " + articulos.length + " elementos");  
+                //alert(articulos[0]);              
+            </script>
+            <h3>Arrays Números</h3>
+            <script>
+                document.write("<p>El primer número es: <strong>");
+                document.write(numbers[0] + "</strong></p>");
+                document.write("<p>El segundo número es: <strong>");
+                document.write(numbers[1] + "</strong></p>");
+                document.write("<p>El tercer número es: <strong>");
+                document.write(numbers[2] + "</strong></p>");
+                document.write("<p>El cuarto número es: <strong>");
+                document.write(numbers[3] + "</strong></p>");
+                document.write("<p>El quinto número es: <strong>");
+                document.write(numbers[4] + "</strong></p>");
+                document.write("<p>El sexto número es: <strong>");
+                document.write("No hay un sexto número, lo siento</strong></p>");
+                document.write("<p>El último número del Array es: <strong>");
+                document.write(numbers[4] + "</strong>. Se obtuvo este resultado con el código nombreArray[númeroElemento]</p>");// Primera forma de acceder al último elemento del array, pero hay que saber cuantos elementos en total hay
+                //alert("El último elemento del Array Números es: " + numbers[numbers.length-1]);// Segunda forma de acceder al último elemento del array, sin saber cuantos elementos en total hay
+                document.write("<p>El primer número del Array es: <strong>");
+                document.write(numbers[0] + "</strong>. Se obtuvo este resultado con el código nombreArray[númeroElemento]</p>");
+                document.write("<h4>El total de elementos en el array números es: " + numbers.length + ". Hemos usado la propiedad lenght para obtener este valor</h4>");
+                numbers.unshift(0); //Agrega elementos al inicio del arrray
+                document.write("<p>He agregado un nuevo elemento al inicio del array con el método unshift(), <strong>¿Quieres saber cuál es?</strong></p>")
+                document.write("<p>El primer elemento ahora es: <strong>" + numbers[0] + "</strong></p>");
+                document.write("<h4>Ahora el total de elementos del array es: <strong>" + numbers.length + "</strong></h4>");
+                numbers.push("six"); // Agrega elementos al final del array
+                document.write("<p>Ahora he agregado un nuevo elemento, pero al final del array con el método push(), <strong>¿Quieres saber cuál es?</strong></p>")
+                document.write("<p>El último elemento ahora es: <strong>" + numbers[numbers.length-1] + "</strong>. Se obtuvo este resultado con el código nombreArray[nombreArray.lenght-1]</p>");
+                document.write("<h4>Ahora el total de elementos del array es: <strong>" + numbers.length + "</strong></h4>");
+                numbers.shift(0); // Elimina elementos al inicio del array
+                document.write("<p>Acabo de eliminar el primer elemento del array con el metodo shift()</p>");
+                document.write("<h4>Ahora el total de elementos del array es: <strong>" + numbers.length + "</strong></h4>");
+                numbers.pop("six"); // Elimina elementos al final del array
+                document.write("<p>Acabo de eliminar el primer elemento del array con el metodo pop()</p>");
+                document.write("<h4>Ahora el total de elementos del array es: <strong>" + numbers.length + "</strong></h4>");
+                //alert("En el Array Números hay " + numbers.length + " elementos");                                  
+            </script>
+           
+
+        </div>
+        
+        <footer>
+            <p>&copy;Pildoras Informáticas</p>
+        </footer>
+        
+            
+    </div>
+    
     
 </body>
 </html>
